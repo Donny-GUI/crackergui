@@ -1,7 +1,9 @@
 import PySimpleGUI as sg
 import os
 
-
+#############################################
+######[]    CHARACTERSET DECLARE    []#######
+#############################################
 ASCII = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
 SUPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïð "
 DIGITS = "0123456789"
@@ -26,12 +28,16 @@ character_set_names = list(base_character_set.keys())
 character_sets = list(base_character_set.values())
 
 
-
-
 def main():
-    ############################################
-    ######[ INDIVIDUAL ITEMS IN THE GUI ]#######
-    ############################################
+    
+    #|######################################|#
+    #|          ALL GUI ELEMENTS            |#
+    #|                                      |# 
+    #| Individual items from the top to the |# 
+    #|  bottom, left to right for each line |# 
+    #|  of the gui, as they appear.         |#
+    #|######################################|#
+    
     top_label_password_list_maker = sg.T(
         " \n\tPassword List Maker\t\n ", 
         font='ubuntu 20', 
@@ -136,9 +142,9 @@ def main():
             ]
         ]
     )
-    ##################################
-    ######[]   MAIN LAYOUT    []######
-    ##################################
+    ##################################|
+    ######[]   MAIN LAYOUT    []######|
+    ##################################|
     layout = [
         [
             top_label_password_list_maker
@@ -156,10 +162,10 @@ def main():
             frame3_outfile_label, frame3_outfile_entry_box, frame3_file_browse_button
         ],
     ]
-    
-    #######################################
-    ######[] MAIN WINDOW SETTINGS []#######
-    #######################################
+        
+    #######################################|
+    ######[] MAIN WINDOW SETTINGS []#######|
+    #######################################|
     
     window = sg.Window("Cracker", layout, finalize=True)
     
